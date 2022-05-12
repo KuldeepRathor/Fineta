@@ -29,13 +29,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
 
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -45,23 +39,31 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.end,
           children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                minimumSize:Size(348,56),
+                primary: Color(0xFF436CFF)
+              ),
+              onPressed: () {},
+              child: const Text('Sign Up'),
             ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headline4,
+            SizedBox(height:16),
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                minimumSize:Size(348,56),
+                  primary: Colors.white,
+                onPrimary: Colors.blue,
+              ),
+              onPressed: () {},
+              child: const Text('Login'),
             ),
+            SizedBox(height:38),
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ),
+
     );
   }
 }
