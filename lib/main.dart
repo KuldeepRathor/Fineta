@@ -1,69 +1,34 @@
+import 'package:fineta/screens/homepage.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+
+import 'providers/piechart_provider.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    MultiProvider(
+      providers: [
+        ChangeNotifierProvider(
+          create: (context) => HowToSpend(),
+        ),
+      ],
+      child: const Fineta(),
+    ),
+  );
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+class Fineta extends StatelessWidget {
+  const Fineta({Key? key}) : super(key: key);
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
+      title: 'Fineta',
+      theme: ThemeData.dark().copyWith(
+        primaryColor: Colors.white,
+        scaffoldBackgroundColor: const Color(0xff080C15),
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
-    );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
-  final String title;
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.end,
-          children: <Widget>[
-            ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                minimumSize:Size(348,56),
-                primary: Color(0xFF436CFF)
-              ),
-              onPressed: () {},
-              child: const Text('Sign Up'),
-            ),
-            SizedBox(height:16),
-            ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                minimumSize:Size(348,56),
-                  primary: Colors.white,
-                onPrimary: Colors.blue,
-              ),
-              onPressed: () {},
-              child: const Text('Login'),
-            ),
-            SizedBox(height:38),
-          ],
-        ),
-      ),
-
+      home: const HomePage(title: 'Fineta'),
     );
   }
 }
