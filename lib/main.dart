@@ -1,3 +1,4 @@
+import 'package:fineta/screens/Onboardscreen.dart';
 import 'package:fineta/screens/homepage.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -28,7 +29,7 @@ class Fineta extends StatelessWidget {
         primaryColor: Colors.white,
         scaffoldBackgroundColor: const Color(0xff080C15),
       ),
-      home: const HomePage(title: 'Fineta'),
+      home: Onboard(),
     );
   }
 }
