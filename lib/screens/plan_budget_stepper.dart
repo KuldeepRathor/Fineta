@@ -1,3 +1,4 @@
+import 'package:fineta/bt_navbar.dart';
 import 'package:fineta/screens/homepage.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -32,6 +33,16 @@ class _PlanYourBudgetScreenState extends State<PlanYourBudgetScreen> {
     rentController.text = "0";
     emiController.text = "0";
     othersController.text = "0";
+  }
+
+  @override
+  void dispose() {
+    // TODO: implement dispose
+    incomeController.dispose();
+    rentController.dispose();
+    emiController.dispose();
+    othersController.dispose();
+    super.dispose();
   }
 
   @override
@@ -75,7 +86,7 @@ class _PlanYourBudgetScreenState extends State<PlanYourBudgetScreen> {
                     Navigator.pushReplacement(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => const HomePage(title: "Fineta"),
+                          builder: (context) => const BtNavigationBar(),
                         ));
                   }
                   setState(() {

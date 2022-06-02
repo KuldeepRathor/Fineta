@@ -21,14 +21,14 @@ class _SpendingPieChartState extends State<SpendingPieChart> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    context.read<HowToSpend>().addDummyData();
+    // context.read<HowToSpend>().addDummyData();
     print("inside InitState of PieChart");
   }
 
   @override
   void dispose() {
     // TODO: implement dispose
-    context.read<HowToSpend>().clearDummyData();
+    // context.read<HowToSpend>().clearDummyData();
     print("inside Dispose of PieChart");
 
     super.dispose();

@@ -10,10 +10,51 @@ class HowToSpend with ChangeNotifier {
 
   double _availableMoney = 0;
 
-  List<String> _itemName = [];
-  List<double> _itemPercent = [];
-  List<PieChartSectionData> _data = [];
-  List<PieChartSectionData> _dummyData = [];
+  final List<String> _itemName = [];
+  final List<double> _itemPercent = [];
+  final List<PieChartSectionData> _data = [];
+  final List<PieChartSectionData> _dummyData = [
+    PieChartSectionData(
+      color: Colors.red,
+      value: 10,
+      title: "10",
+      radius: 50,
+      titleStyle: const TextStyle(
+          fontSize: 19, fontWeight: FontWeight.bold, color: Color(0xffffffff)),
+    ),
+    PieChartSectionData(
+      color: Colors.blue,
+      value: 20,
+      title: "20",
+      radius: 50,
+      titleStyle: const TextStyle(
+          fontSize: 19, fontWeight: FontWeight.bold, color: Color(0xffffffff)),
+    ),
+    PieChartSectionData(
+      color: Colors.green,
+      value: 30,
+      title: "30",
+      radius: 50,
+      titleStyle: const TextStyle(
+          fontSize: 19, fontWeight: FontWeight.bold, color: Color(0xffffffff)),
+    ),
+    PieChartSectionData(
+      color: Colors.orangeAccent,
+      value: 40,
+      title: "40",
+      radius: 50,
+      titleStyle: const TextStyle(
+          fontSize: 19, fontWeight: FontWeight.bold, color: Color(0xffffffff)),
+    ),
+    PieChartSectionData(
+      color: Colors.purple,
+      value: 50,
+      title: "50",
+      radius: 50,
+      titleStyle: const TextStyle(
+          fontSize: 19, fontWeight: FontWeight.bold, color: Color(0xffffffff)),
+    ),
+  ];
   List<Color> colors = [
     Colors.red,
     Colors.blue,
@@ -98,26 +139,28 @@ class HowToSpend with ChangeNotifier {
     }
   }
 
-  void addDummyData() {
-    for (int i = 0; i < 5; i++) {
-      var dataToBeAdded = PieChartSectionData(
-        color: colors[i % 5],
-        value: i * 10,
-        title: "${i * 10}",
-        radius: 50,
-        titleStyle: const TextStyle(
-            fontSize: 19,
-            fontWeight: FontWeight.bold,
-            color: Color(0xffffffff)),
-      );
+  // void addDummyData() {
+  //   for (int i = 0; i < 5; i++) {
+  //     var dataToBeAdded = PieChartSectionData(
+  //       color: colors[i % 5],
+  //       value: i * 10,
+  //       title: "${i * 10}",
+  //       radius: 50,
+  //       titleStyle: const TextStyle(
+  //           fontSize: 19,
+  //           fontWeight: FontWeight.bold,
+  //           color: Color(0xffffffff)),
+  //     );
 
-      dummyData.add(dataToBeAdded);
-    }
-  }
+  //     dummyData.add(dataToBeAdded);
+  //   }
+  // }
 
-  void clearDummyData() {
-    dummyData.clear();
-  }
+  // void clearDummyData() {
+  //   if (dummyData.isNotEmpty) {
+  //     dummyData.clear();
+  //   }
+  // }
 
   List<PieChartSectionData>? getSectionData(BuildContext context) {
     if (_itemName.isEmpty) {

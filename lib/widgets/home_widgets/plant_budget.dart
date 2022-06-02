@@ -29,13 +29,11 @@ class _PlanYourBudgetState extends State<PlanYourBudget> {
           borderRadius: BorderRadius.circular(20),
           child: InkWell(
             borderRadius: BorderRadius.circular(20),
-            onTap: () => Navigator.push(
+            onTap: () => Navigator.pushReplacement(
                 context,
                 MaterialPageRoute(
                   builder: (context) => PlanYourBudgetScreen(),
-                )).then((_) {
-              setState(() {});
-            }),
+                )),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
