@@ -27,7 +27,7 @@ class Fineta extends StatelessWidget {
       title: 'Fineta',
       theme: ThemeData.dark().copyWith(
         primaryColor: Colors.white,
-        scaffoldBackgroundColor: const Color(0xff080C15),
+        scaffoldBackgroundColor: Image.asset('images/Gradient.png').color,
       ),
       home: Onboard(),
     );

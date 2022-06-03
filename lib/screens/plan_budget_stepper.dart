@@ -1,5 +1,4 @@
 import 'package:fineta/bt_navbar.dart';
-import 'package:fineta/screens/homepage.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -181,14 +180,15 @@ class _PlanYourBudgetScreenState extends State<PlanYourBudgetScreen> {
                   textAlign: TextAlign.center,
                   style: const TextStyle(color: Colors.white),
                   decoration: InputDecoration(
-                      filled: true,
-                      hintText: "Budget1?",
-                      hintStyle: const TextStyle(color: Colors.white),
-                      fillColor: const Color.fromARGB(255, 96, 96, 186),
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(10),
-                        borderSide: BorderSide.none,
-                      )),
+                    filled: true,
+                    hintText: "Budget1?",
+                    hintStyle: const TextStyle(color: Colors.white),
+                    fillColor: const Color.fromARGB(255, 96, 96, 186),
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(10),
+                      borderSide: BorderSide.none,
+                    ),
+                  ),
                 ),
                 const SizedBox(
                   height: 20,

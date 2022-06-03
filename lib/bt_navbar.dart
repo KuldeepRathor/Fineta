@@ -1,6 +1,7 @@
 import 'package:fineta/screens/homepage.dart';
+import 'package:fineta/screens/split_bill.dart';
 import 'package:flutter/material.dart';
-
+import 'package:fineta/screens/Profile.dart';
 class BtNavigationBar extends StatefulWidget {
   const BtNavigationBar({Key? key}) : super(key: key);
 
@@ -12,18 +13,17 @@ class _BtNavigationBarState extends State<BtNavigationBar> {
   int _selectedIndex = 0;
   static const List<Widget> _widgetOptions = <Widget>[
     HomePage(title: "homescreen"),
-    Text(
-      "Split Bill",
-      style: TextStyle(color: Colors.white),
-    ),
+    Split_Bill(title: 'Split-Bill'),
+
+    // Text(
+    //   "Split Bill",
+    //   style: TextStyle(color: Colors.white),
+    // ),
     Text(
       "Community",
       style: TextStyle(color: Colors.white),
     ),
-    Text(
-      "Profile",
-      style: TextStyle(color: Colors.white),
-    ),
+    Profilepage(),
   ];
 
   @override

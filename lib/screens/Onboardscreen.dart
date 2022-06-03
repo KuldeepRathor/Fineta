@@ -1,4 +1,5 @@
 import 'package:fineta/bt_navbar.dart';
+import 'package:fineta/screens/login_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
@@ -26,10 +27,12 @@ class Onboard extends StatelessWidget {
               Expanded(
                 child: PageView.builder(
                   controller: controller,
-                  itemBuilder: (context, index) => Onboardcontent(
+                  itemBuilder: (context, index) {
+                    return Onboardcontent(
                     title: list[index],
                     description: des[index],
-                  ),
+                  );
+                  },
                   itemCount: list.length,
                 ),
               ),
@@ -72,7 +75,13 @@ class Onboard extends StatelessWidget {
                         primary: Colors.white,
                         onPrimary: Colors.blue,
                       ),
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => LoginPage(),
+                            ));
+                      },
                       child: const Text('Login'),
                     ),
                   ),

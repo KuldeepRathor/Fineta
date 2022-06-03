@@ -30,10 +30,11 @@ class _PlanYourBudgetState extends State<PlanYourBudget> {
           child: InkWell(
             borderRadius: BorderRadius.circular(20),
             onTap: () => Navigator.pushReplacement(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => PlanYourBudgetScreen(),
-                )),
+              context,
+              MaterialPageRoute(
+                builder: (context) => PlanYourBudgetScreen(),
+              ),
+            ),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
