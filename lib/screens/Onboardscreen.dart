@@ -56,7 +56,7 @@ class Onboard extends StatelessWidget {
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
                           minimumSize: const Size(358, 56),
-                          primary: const Color(0xFF436CFF)),
+                          primary: const Color(0xFF00BDAB)),
                       onPressed: () {
                         Navigator.pushReplacement(
                             context,
@@ -73,7 +73,7 @@ class Onboard extends StatelessWidget {
                       style: ElevatedButton.styleFrom(
                         minimumSize: const Size(358, 56),
                         primary: Colors.white,
-                        onPrimary: Colors.blue,
+                        onPrimary: Color(0xff00BDAB),
                       ),
                       onPressed: () {
                         Navigator.pushReplacement(
