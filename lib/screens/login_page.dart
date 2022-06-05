@@ -1,3 +1,4 @@
+import 'package:fineta/bt_navbar.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatelessWidget {
@@ -80,7 +81,11 @@ class LoginPage extends StatelessWidget {
                                   borderRadius: BorderRadius.circular(8.0)),
                               minimumSize: const Size(1000, 60), //////// HERE
                             ),
-                            onPressed: () {},
+                            onPressed: () { Navigator.pushReplacement(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => BtNavigationBar(),
+                                ));},
                             child: const Text(
                               'Login',
                               style: TextStyle(fontSize: 18),

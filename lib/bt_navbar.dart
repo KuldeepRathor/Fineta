@@ -47,7 +47,7 @@ class _BtNavigationBarState extends State<BtNavigationBar> {
             ),
             BottomNavigationBarItem(
               icon: Image.asset("assets/icons/splitbill_icon.png"),
-              label: 'Friends',
+              label: 'Split Bill',
               activeIcon: Image.asset(
                 "assets/icons/splitbill_icon.png",
                 color: Colors.blue,

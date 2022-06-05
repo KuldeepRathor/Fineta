@@ -71,7 +71,7 @@ class _SpendingPieChartState extends State<SpendingPieChart> {
                 child: Text(
                   '+Add Funds',
                   style: TextStyle(
-                    color: Color(0xff436CFF),
+                    color: Color(0xff00BDAB),
                   ),
                 ),
               ),
@@ -82,7 +82,7 @@ class _SpendingPieChartState extends State<SpendingPieChart> {
             height: widget.size.height * 0.3,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(8),
-              color: const Color(0xff232A44),
+              color: Colors.transparent,
             ),
             child: Padding(
               padding: const EdgeInsets.all(16),
@@ -135,7 +135,7 @@ class _SpendingPieChartState extends State<SpendingPieChart> {
                   child: Text(
                     'SEE DETAILED SUMMARY ⚡',
                     style: TextStyle(
-                      color: Color(0xff436CFF),
+                      color: Color(0xff00BDAB),
                       fontSize: 18,
                       fontWeight: FontWeight.bold,
                     ),

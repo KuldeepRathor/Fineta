@@ -17,12 +17,13 @@ class TopAppBar extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
             const CircleAvatar(
-              backgroundColor: Color(0xFFFB7143),
+              backgroundColor: Color(0xff00BDAB),
+              child: Text('K',style: TextStyle(fontSize: 25),),
             ),
             Container(
               padding: const EdgeInsets.only(left: 10),
               child: Text(
-                'Hi Kuldeep🏆',
+                'Hi Kuldeep',
                 style: themeData.textTheme.headlineSmall,
               ),
             ),

@@ -21,7 +21,7 @@ class _PlanYourBudgetState extends State<PlanYourBudget> {
         height: widget.size.height * 0.15,
         width: widget.size.width - 24,
         decoration: BoxDecoration(
-          color: const Color(0xff9747FF),
+          color: const Color(0xff00BDAB),
           borderRadius: BorderRadius.circular(20),
         ),
         child: Material(
@@ -41,16 +41,21 @@ class _PlanYourBudgetState extends State<PlanYourBudget> {
                 Column(
                   children: const [
                     Padding(
-                      padding: EdgeInsets.all(12.0),
+                      padding: EdgeInsets.fromLTRB(18, 22, 12, 6),
                       child: Text(
                         'Lets Plan your Budget..',
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
-                          fontSize: 20,
+                          fontSize: 22,
+                          color: Colors.black,
                         ),
                       ),
                     ),
-                    Text('Get better insights on your money'),
+                    Text('Get better insights on your money',
+                    style: TextStyle(
+                      fontSize: 15,
+                    ),
+                    ),
                   ],
                 ),
                 Expanded(

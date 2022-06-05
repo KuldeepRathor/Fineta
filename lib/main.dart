@@ -24,10 +24,11 @@ class Fineta extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Fineta',
       theme: ThemeData.dark().copyWith(
         primaryColor: Colors.white,
-        scaffoldBackgroundColor: Image.asset('images/Gradient.png').color,
+        scaffoldBackgroundColor: Colors.black,
       ),
       home: Onboard(),
     );
